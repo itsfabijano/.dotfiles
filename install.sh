@@ -1,4 +1,3 @@
 #!/bin/bash
+brew install neovim
 brew install ripgrep
-
-ln -s $(pwd)/nvim ~/.config/nvim
