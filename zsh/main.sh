@@ -5,6 +5,9 @@ alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
 
+export TERM=screen-256color
+export ZSH_TMUX_TERM="screen-256color"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -80,6 +83,7 @@ plugins=(
 	zsh-autosuggestions
 	fzf
 	zsh-npm-scripts-autocomplete
+    zsh-syntax-highlighting
 )
 
 ZSH_DISABLE_COMPFIX=true
