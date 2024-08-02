@@ -2,5 +2,9 @@
 
 rm -rf ~/.config/nvim
 ln -s $(pwd)/nvim ~/.config/nvim
-cp $(pwd)/zsh/.zshrc ~/.zshrc
+
+rm -rf ~/.zshrc
+ln -s $(pwd)/zsh/.zshrc ~/.zshrc
+
+rm -rf ~/.tmux.conf
 ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.conf
