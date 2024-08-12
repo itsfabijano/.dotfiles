@@ -8,6 +8,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
 
+export EDITOR=nvim
 export TERM=screen-256color
 export ZSH_TMUX_TERM="screen-256color"
 
