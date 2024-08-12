@@ -1,4 +1,4 @@
-source $HOME/config-toolkit/zsh/helpers.sh
+source $HOME/.dotfiles/zsh/helpers.sh
 
 include $HOME/.zshrc_before
 # If you come from bash you might have to change your $PATH.
@@ -96,7 +96,7 @@ bashcompinit
 
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
-source $HOME/config-toolkit/zsh/aliases.sh
+source $HOME/.dotfiles/zsh/aliases.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -105,7 +105,7 @@ export NVM_DIR="$HOME/.nvm"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 export LANG=en_US.UTF-8
 
-source $HOME/config-toolkit/zsh/fzf.sh
+source $HOME/.dotfiles/zsh/fzf.sh
 
 # User configuration
 

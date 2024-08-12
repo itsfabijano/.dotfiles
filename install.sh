@@ -5,6 +5,7 @@ brew install tmux
 brew install fzf
 brew install nvm
 brew install tree
+brew install --cask wezterm
 
 # Lazygit
 brew install jesseduffield/lazygit/lazygit

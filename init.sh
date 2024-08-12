@@ -8,3 +8,6 @@ ln -s $(pwd)/zsh/.zshrc ~/.zshrc
 
 rm -rf ~/.tmux.conf
 ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.conf
+
+rm -rf ~/.wezterm.lua
+ln -s $(pwd)/wezterm/.wezterm.lua ~/.wezterm.lua
