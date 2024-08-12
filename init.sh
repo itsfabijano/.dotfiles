@@ -11,3 +11,6 @@ ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.conf
 
 rm -rf ~/.wezterm.lua
 ln -s $(pwd)/wezterm/.wezterm.lua ~/.wezterm.lua
+
+rm -rf ~/.config/kitty 
+ln -s $(pwd)/kitty ~/.config/kitty
