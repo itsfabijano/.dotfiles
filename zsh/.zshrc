@@ -9,8 +9,8 @@ alias vi="nvim"
 alias oldvim="vim"
 
 export EDITOR=nvim
-export TERM=screen-256color
-export ZSH_TMUX_TERM="screen-256color"
+#export TERM=screen-256color
+#export ZSH_TMUX_TERM="screen-256color"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"

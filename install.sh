@@ -5,7 +5,7 @@ brew install tmux
 brew install fzf
 brew install nvm
 brew install tree
-brew intsall bat
+brew install bat
 brew install --cask wezterm
 
 # Lazygit
@@ -19,3 +19,5 @@ git clone \
   ~/.oh-my-zsh/custom/plugins/zsh-npm-scripts-autocomplete
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+# Kitty Terminal
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
