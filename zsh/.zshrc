@@ -7,7 +7,7 @@ include $HOME/.zshrc_before
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
-alias tmx="~/.dotfiles/bin/tmux-session"
+alias tmx="tmux-session"
 
 export EDITOR=nvim
 #export TERM=screen-256color
