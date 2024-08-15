@@ -1,4 +1,4 @@
-source $HOME/.dotfiles/zsh/helpers.sh
+source $HOME/.config/zsh/helpers.sh
 
 include $HOME/.zshrc_before
 # If you come from bash you might have to change your $PATH.
@@ -7,6 +7,7 @@ include $HOME/.zshrc_before
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
+alias tmx="~/.dotfiles/bin/tmux-session"
 
 export EDITOR=nvim
 #export TERM=screen-256color
@@ -97,7 +98,7 @@ bashcompinit
 
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
-source $HOME/.dotfiles/zsh/aliases.sh
+source $HOME/.config/zsh/aliases.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -106,7 +107,7 @@ export NVM_DIR="$HOME/.nvm"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 export LANG=en_US.UTF-8
 
-source $HOME/.dotfiles/zsh/fzf.sh
+source $HOME/.config/zsh/fzf.sh
 
 # User configuration
 

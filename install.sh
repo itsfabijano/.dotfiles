@@ -7,6 +7,7 @@ brew install nvm
 brew install tree
 brew install bat
 brew install --cask wezterm
+brew install stow
 
 # Lazygit
 brew install jesseduffield/lazygit/lazygit
