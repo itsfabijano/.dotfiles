@@ -1,6 +1,5 @@
 # DOTFILES
 
 ## Github Copilot
-```
-:Copilot setup
-```
+- Setup: `:Copilot setup`
+- Help: `:help copilot`
