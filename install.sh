@@ -9,6 +9,9 @@ brew install bat
 brew install --cask wezterm
 brew install stow
 
+# Fonts
+brew install font-meslo-lg-nerd-font
+
 # Lazygit
 brew install jesseduffield/lazygit/lazygit
 brew install lazygit
