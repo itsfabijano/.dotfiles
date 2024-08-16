@@ -5,3 +5,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PATH="$PATH:$HOME/.dotfiles/bin"
 
+source $(brew --prefix nvm)/nvm.sh
+
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
