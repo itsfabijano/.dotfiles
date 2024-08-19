@@ -1,4 +1,4 @@
-return {
+return { {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
@@ -36,11 +36,18 @@ return {
         treesitter_parser_config.templ = {
             install_info = {
                 url = "https://github.com/vrischmann/tree-sitter-templ.git",
-                files = {"src/parser.c", "src/scanner.c"},
+                files = { "src/parser.c", "src/scanner.c" },
                 branch = "master",
             },
         }
 
         vim.treesitter.language.register("templ", "templ")
     end
-}
+}, {
+    "nvim-treesitter/nvim-treesitter-context",
+    config = function()
+        require("treesitter-context").setup({
+            enable = true,
+        })
+    end
+} }
