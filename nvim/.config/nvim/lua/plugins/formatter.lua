@@ -11,6 +11,7 @@ return {
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
 				lua = { "stylua" },
+				graphql = { "prettier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
