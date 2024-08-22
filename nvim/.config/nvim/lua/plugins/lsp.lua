@@ -27,7 +27,6 @@ return {
 		require("mason").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
-				"tsserver",
 				"eslint",
 				"lua_ls",
 				"rust_analyzer",
@@ -61,7 +60,7 @@ return {
 						capabilities = capabilities,
 						settings = {
 							Lua = {
-								runtime = { version = "Lua 5.1" },
+								-- runtime = { version = "Lua 5.1" },
 								diagnostics = {
 									globals = { "bit", "vim", "it", "describe", "before_each", "after_each" },
 								},

@@ -10,22 +10,22 @@ local config = wezterm.config_builder()
 -- config.color_scheme = 'AdventureTime'
 --
 
--- config.front_end = "WebGpu"
+config.front_end = "WebGpu"
 
 config.enable_tab_bar = false
 config.window_decorations = "INTEGRATED_BUTTONS"
 config.window_padding = {
-	top = 30,
+	top = 35,
 	bottom = 0,
-	left = 5,
-	right = 5,
+	left = 10,
+	right = 10,
 }
 config.colors = {
 	background = "#0c0e13",
 }
 
 -- Font
-config.font = wezterm.font("MesloLGM Nerd Font Mono", { weight = "Regular" })
+config.font = wezterm.font("Roboto Mono", { weight = "Regular" })
 config.font_size = 12
 -- config.line_height = 1.15
 
@@ -41,6 +41,31 @@ config.keys = {
 		key = "RightArrow",
 		mods = "OPT",
 		action = wezterm.action({ SendString = "\x1bf" }),
+	},
+	{
+		key = "1",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(1)\r" }),
+	},
+	{
+		key = "2",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(2)\r" }),
+	},
+	{
+		key = "3",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(3)\r" }),
+	},
+	{
+		key = "4",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(4)\r" }),
+	},
+	{
+		key = "b",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":NvimTreeToggle\r" }),
 	},
 }
 

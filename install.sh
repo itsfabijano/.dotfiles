@@ -11,6 +11,7 @@ brew install stow
 
 # Fonts
 brew install font-meslo-lg-nerd-font
+brew install font-roboto-mono
 
 # Lazygit
 brew install jesseduffield/lazygit/lazygit

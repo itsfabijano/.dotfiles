@@ -17,7 +17,7 @@ return {
 				},
 			},
 			defaults = {
-				file_ignore_patterns = { "yarn.lock", "node_modules/*" },
+				file_ignore_patterns = { "yarn.lock", "node_modules/*", ".git/*" },
 			},
 		})
 
