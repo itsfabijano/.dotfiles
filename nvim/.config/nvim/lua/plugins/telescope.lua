@@ -15,6 +15,9 @@ return {
 				git_files = {
 					hidden = true,
 				},
+				commands = {
+					theme = "dropdown",
+				},
 			},
 			defaults = {
 				file_ignore_patterns = { "yarn.lock", "node_modules/*", ".git/*" },
@@ -36,5 +39,7 @@ return {
 			builtin.grep_string({ search = vim.fn.input("Grep > ") })
 		end)
 		vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
+
+		vim.keymap.set("n", "<leader>pc", builtin.commands, {})
 	end,
 }

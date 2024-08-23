@@ -63,9 +63,14 @@ config.keys = {
 		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(4)\r" }),
 	},
 	{
-		key = "b",
-		mods = "CMD",
-		action = wezterm.action({ SendString = ":NvimTreeToggle\r" }),
+		key = "P",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.ActivateCommandPalette,
+	},
+	{
+		key = "p",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.Nop,
 	},
 }
 
