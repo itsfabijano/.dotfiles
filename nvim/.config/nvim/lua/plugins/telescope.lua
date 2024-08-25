@@ -15,9 +15,6 @@ return {
                 git_files = {
                     hidden = true,
                 },
-                commands = {
-                    theme = "dropdown",
-                },
             },
             defaults = {
                 file_ignore_patterns = { "yarn.lock", "node_modules/*", ".git/*" },
@@ -57,7 +54,7 @@ return {
         -- [V]iew [H]elp
         vim.keymap.set("n", "<leader>vh", builtin.help_tags, {})
 
-        -- [V]iew [C]ommands:w
+        -- [V]iew [C]ommands
         vim.keymap.set("n", "<leader>vc", builtin.commands, {})
     end,
 }
