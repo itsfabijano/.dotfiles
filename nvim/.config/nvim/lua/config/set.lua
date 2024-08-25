@@ -29,3 +29,11 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "120"
+
+-- Don't show the mode, since it's already in the status linE
+vim.opt.showmode = false
+
+vim.opt.cursorline = false
+
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = 'split'

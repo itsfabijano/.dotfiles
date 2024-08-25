@@ -36,7 +36,7 @@ return {
                     SignColumn = { bg = "None" },
                     Folded = { bg = "None" },
                     FoldColumn = { bg = "None" },
-                    CursorLine = { bg = "None" },
+                    CursorLine = { bg = "#1b1c1f" },
                     CursorColumn = { bg = "None" },
                     WhichKeyFloat = { bg = "None" },
                     VertSplit = { bg = "None" },
