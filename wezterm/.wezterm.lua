@@ -15,13 +15,19 @@ config.front_end = "WebGpu"
 config.enable_tab_bar = false
 config.window_decorations = "INTEGRATED_BUTTONS"
 config.window_padding = {
-    top = "2cell",
-    bottom = 0,
-    left = "1.5cell",
-    right = "1.5cell",
+	top = "2cell",
+	bottom = 0,
+	left = "1.5cell",
+	right = "1.5cell",
 }
+
+local COLORS = {
+	ayu_background = "#0c0e13",
+	custom_background = "#18181b",
+}
+
 config.colors = {
-    background = "#0c0e13",
+	background = COLORS.custom_background,
 }
 
 -- config.send_composed_key_when_left_alt_is_pressed = true
@@ -33,53 +39,53 @@ config.font_size = 12
 -- config.line_height = 1.15
 
 config.keys = {
-    -- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
-    {
-        key = "LeftArrow",
-        mods = "OPT",
-        action = wezterm.action({ SendString = "\x1bb" }),
-    },
-    -- Make Option-Right equivalent to Alt-f; forward-word
-    {
-        key = "RightArrow",
-        mods = "OPT",
-        action = wezterm.action({ SendString = "\x1bf" }),
-    },
-    {
-        key = "1",
-        mods = "CMD",
-        action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(1)\r" }),
-    },
-    {
-        key = "2",
-        mods = "CMD",
-        action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(2)\r" }),
-    },
-    {
-        key = "3",
-        mods = "CMD",
-        action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(3)\r" }),
-    },
-    {
-        key = "4",
-        mods = "CMD",
-        action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(4)\r" }),
-    },
-    {
-        key = "P",
-        mods = "CMD|SHIFT",
-        action = wezterm.action.ActivateCommandPalette,
-    },
-    {
-        key = "p",
-        mods = "CTRL|SHIFT",
-        action = wezterm.action.Nop,
-    },
-    {
-        key = "p",
-        mods = "CMD",
-        action = wezterm.action({ SendString = ":CustomFindFiles\r" }),
-    },
+	-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
+	{
+		key = "LeftArrow",
+		mods = "OPT",
+		action = wezterm.action({ SendString = "\x1bb" }),
+	},
+	-- Make Option-Right equivalent to Alt-f; forward-word
+	{
+		key = "RightArrow",
+		mods = "OPT",
+		action = wezterm.action({ SendString = "\x1bf" }),
+	},
+	{
+		key = "1",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(1)\r" }),
+	},
+	{
+		key = "2",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(2)\r" }),
+	},
+	{
+		key = "3",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(3)\r" }),
+	},
+	{
+		key = "4",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":lua require('harpoon.ui').nav_file(4)\r" }),
+	},
+	{
+		key = "P",
+		mods = "CMD|SHIFT",
+		action = wezterm.action.ActivateCommandPalette,
+	},
+	{
+		key = "p",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.Nop,
+	},
+	{
+		key = "p",
+		mods = "CMD",
+		action = wezterm.action({ SendString = ":CustomFindFiles\r" }),
+	},
 }
 
 -- and finally, return the configuration to wezterm
