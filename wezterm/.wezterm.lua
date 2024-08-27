@@ -8,11 +8,17 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 -- config.color_scheme = 'AdventureTime'
---
+
+-- Tabs
+config.use_fancy_tab_bar = false
+config.show_tabs_in_tab_bar = true
+config.show_new_tab_button_in_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = false
+config.enable_tab_bar = true
+config.tab_bar_at_bottom = true
 
 config.front_end = "WebGpu"
 
-config.enable_tab_bar = false
 config.window_decorations = "INTEGRATED_BUTTONS"
 config.window_padding = {
     top = "2cell",
@@ -28,6 +34,18 @@ local COLORS = {
 
 config.colors = {
     background = COLORS.custom_background,
+    tab_bar = {
+        background = "#333333",
+        active_tab = {
+            bg_color = "#333333",
+            fg_color = "Red",
+            intensity = "Bold",
+        },
+        inactive_tab = {
+            bg_color = "#333333",
+            fg_color = "#5eacd3",
+        },
+    }
 }
 
 -- config.send_composed_key_when_left_alt_is_pressed = true
