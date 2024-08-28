@@ -11,13 +11,12 @@ local function harpoon_section()
 			-- hook callback, called when an update was requested by either the user of external events (using autocommands)
 		end,
 		draw = function()
-			local marks = harpoon.get_mark_config().marks
+			local items = harpoon:list().items
 			local harpoon_marks = {}
-
 			local function generate_lines()
 				harpoon_marks = {}
-				for i, mark in pairs(marks) do
-					table.insert(harpoon_marks, string.format("[%d] %s", i, mark.filename))
+				for i, item in ipairs(items) do
+					table.insert(harpoon_marks, string.format("[%d] %s", i, item.value))
 				end
 			end
 			generate_lines()
