@@ -1,23 +1,20 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+local keys = require("keys")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
-
--- This is where you actually apply your config choices
-
--- For example, changing the color scheme:
--- config.color_scheme = 'AdventureTime'
 
 -- Tabs
 config.use_fancy_tab_bar = false
 config.show_tabs_in_tab_bar = true
 config.show_new_tab_button_in_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = false
-config.enable_tab_bar = false
+config.enable_tab_bar = true
 config.tab_bar_at_bottom = true
 
-config.front_end = "WebGpu"
+config.enable_kitty_keyboard = true
+config.enable_csi_u_key_encoding = false
 
 config.window_decorations = "INTEGRATED_BUTTONS"
 config.window_padding = {
@@ -49,69 +46,22 @@ config.colors = {
 }
 
 wezterm.on("update-right-status", function(window, pane)
-	local workspace = wezterm.format({
+	window:set_right_status(wezterm.format({
 		{ Attribute = { Underline = "Single" } },
-		{ Text = window:active_workspace() },
-	})
-
-	local dir = wezterm.format({
-		{ Text = pane:get_current_working_dir() },
-	})
-
-	-- Make it italic and underlined
-	window:set_right_status(workspace .. " | " .. dir)
+		{ Text = tostring(window:active_workspace()) },
+		"ResetAttributes",
+		{ Text = " | " },
+		{ Attribute = { Italic = true } },
+		{ Text = tostring(pane:get_current_working_dir()) },
+	}))
 end)
-
--- config.send_composed_key_when_left_alt_is_pressed = true
--- config.send_composed_key_when_right_alt_is_pressed = true
 
 -- Font
 config.font = wezterm.font("Roboto Mono", { weight = "Regular" })
 config.font_size = 12
 -- config.line_height = 1.15
 
--- config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
-
-config.keys = {
-	-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
-	{
-		key = "LeftArrow",
-		mods = "OPT",
-		action = wezterm.action({ SendString = "\x1bb" }),
-	},
-	-- Make Option-Right equivalent to Alt-f; forward-word
-	{
-		key = "RightArrow",
-		mods = "OPT",
-		action = wezterm.action({ SendString = "\x1bf" }),
-	},
-	{
-		key = "P",
-		mods = "CMD|SHIFT",
-		action = wezterm.action.ActivateCommandPalette,
-	},
-	{
-		key = "p",
-		mods = "CTRL|SHIFT",
-		action = wezterm.action.Nop,
-	},
-	{
-		key = "p",
-		mods = "CMD",
-		action = wezterm.action({ SendString = " pg" }),
-	},
-	{
-		key = "b",
-		mods = "CMD",
-		action = wezterm.action({ SendString = " sb" }),
-	},
-}
-
--- table.insert(config.keys, {
--- 	key = "s",
--- 	mods = "LEADER",
--- 	action = wezterm.action.ShowLauncherArgs({ flags = "WORKSPACES" }),
--- })
+keys.setup(config)
 
 -- and finally, return the configuration to wezterm
 return config
