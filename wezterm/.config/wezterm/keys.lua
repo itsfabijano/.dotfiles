@@ -55,6 +55,10 @@ function M.setup(config)
 
 	b.unset("t", "CMD")
 	b.set("c", "LEADER", act.SpawnTab("CurrentPaneDomain"))
+
+	-- TODO: Add more keybindings here
+	-- <Prefix> & for killing a window
+	-- <Prefix> x for killing a pane
 end
 
 return M

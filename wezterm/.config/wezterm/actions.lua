@@ -33,7 +33,7 @@ function M.FuzzyFindWorkspaces()
 						wezterm.log_info("id = " .. id)
 						wezterm.log_info("label = " .. label)
 						inner_window:perform_action(
-							M.SwitchToWorkspace({
+							act.SwitchToWorkspace({
 								name = file.basename(id),
 								spawn = {
 									label = "Workspace: " .. id,
