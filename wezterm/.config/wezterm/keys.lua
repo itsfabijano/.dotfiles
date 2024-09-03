@@ -45,13 +45,16 @@ function M.setup(config)
 
 	for i = 1, 9 do
 		b.unset(tostring(i), "CMD")
-		b.set(tostring(i), "CMD", act.ActivateTab(i - 1))
+		b.set(tostring(i), "LEADER", act.ActivateTab(i - 1))
 	end
 
 	b.set("s", "LEADER", act.ShowLauncherArgs({ flags = "WORKSPACES" }))
 	b.set("f", "LEADER", actions.FuzzyFindWorkspaces())
 	b.set("C", "LEADER", actions.OpenWorkspsace("~/.dotfiles"))
 	b.set("L", "LEADER", actions.PreviousWorkspace())
+
+	b.unset("t", "CMD")
+	b.set("c", "LEADER", act.SpawnTab("CurrentPaneDomain"))
 end
 
 return M
