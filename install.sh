@@ -8,6 +8,7 @@ brew install tree
 brew install bat
 brew install --cask wezterm
 brew install stow
+brew install fd
 
 # Fonts
 brew install font-meslo-lg-nerd-font

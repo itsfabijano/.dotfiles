@@ -42,22 +42,11 @@ return {
 		set("n", "<leader>pf", builtin.find_files, {}) -- [P]roject [F]ilesearch
 		set("n", "<leader>pg", builtin.git_files, {}) -- [P]roject [G]itsearch
 		set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
-
-		set("n", "<leader>pws", function() -- [P]roject [W]ord [S]earch
-			local word = vim.fn.expand("<cword>")
-			builtin.grep_string({ search = word })
-		end)
-		set("n", "<leader>pWs", function() -- [P]roject [W]ord [S]earch
-			local word = vim.fn.expand("<cWORD>")
-			builtin.grep_string({ search = word })
-		end)
-		set("n", "<leader>ps", function() -- [P]roject [S]earch
-			builtin.grep_string({ search = vim.fn.input("Grep > ") })
-		end)
+		set("n", "<leader>pws", builtin.grep_string) -- [P]rep [W]ord [S]earch
+		set("n", "<leader>ps", builtin.live_grep) -- [P]roject [S]earch
 
 		set("n", "<leader>vh", builtin.help_tags, {}) -- [V]iew [H]elp
 
-		-- [P]roject [C]ommands
-		set("n", "<leader>pc", builtin.commands, {})
+		set("n", "<leader>pc", builtin.commands, {}) -- [P]roject [C]ommands
 	end,
 }
