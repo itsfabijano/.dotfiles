@@ -3,43 +3,58 @@ local set = vim.keymap.set
 return {
 	"nvim-telescope/telescope.nvim",
 	tag = "0.1.8",
-	-- or                              , branch = '0.1.x',
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
 		"nvim-telescope/telescope-ui-select.nvim",
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "make",
+		},
 	},
 
 	config = function()
-		require("telescope").setup({
+		local telescope = require("telescope")
+		telescope.setup({
 			pickers = {
 				find_files = {
 					hidden = true,
-					no_ignore = true,
 				},
 				git_files = {
 					hidden = true,
 				},
-			},
-			defaults = {
-				file_ignore_patterns = { "yarn.lock", "node_modules/*", "**/.git/*" },
+				live_grep = {
+					hidden = true,
+				},
 			},
 			extensions = {
 				["ui-select"] = {
 					require("telescope.themes").get_dropdown(),
 				},
+				fzf = {},
 			},
 		})
 
 		-- Enable Telescope extensions if they are installed
-		pcall(require("telescope").load_extension, "fzf")
-		pcall(require("telescope").load_extension, "ui-select")
+		pcall(telescope.load_extension, "fzf")
+		pcall(telescope.load_extension, "ui-select")
 
 		local builtin = require("telescope.builtin")
 
 		set("n", "<leader>pb", builtin.buffers, {}) -- [P]roject [B]uffers
 		set("n", "<D-p>", builtin.git_files, {})
 		set("n", "<leader>pf", builtin.find_files, {}) -- [P]roject [F]ilesearch
+
+		-- [P]roject [A]ll Files
+		set("n", "<leader>pa", function()
+			builtin.find_files(require("telescope.themes").get_dropdown({
+				no_ignore = true,
+				previewer = false,
+				prompt_title = "All Files",
+				file_ignore_patterns = { "yarn.lock", "node_modules/", "%.git/" },
+			}))
+		end)
+
 		set("n", "<leader>pg", builtin.git_files, {}) -- [P]roject [G]itsearch
 		set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
 		set("n", "<leader>pws", builtin.grep_string) -- [P]rep [W]ord [S]earch
