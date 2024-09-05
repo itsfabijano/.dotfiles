@@ -26,16 +26,17 @@ config.window_padding = {
 
 local COLORS = {
 	ayu_background = "#0c0e13",
+	material_ocean_background = "#0f111a",
 	custom_background = "#18181b",
 }
 
 config.colors = {
-	background = COLORS.custom_background,
+	background = COLORS.material_ocean_background,
 	tab_bar = {
 		background = "#333333",
 		active_tab = {
 			bg_color = "#333333",
-			fg_color = "Red",
+			fg_color = "#5eacd3",
 			intensity = "Bold",
 		},
 		inactive_tab = {
@@ -44,20 +45,43 @@ config.colors = {
 		},
 	},
 }
+config.tab_max_width = 100
+
+-- Equivalent to POSIX basename(3)
+-- Given "/foo/bar" returns "bar"
+-- Given "c:\\foo\\bar" returns "bar"
+local function basename(s)
+	return string.gsub(s, "(.*[/\\])(.*)", "%2")
+end
+
+wezterm.on("format-tab-title", function(tab)
+	local pane = tab.active_pane
+	local name = basename(pane.foreground_process_name)
+	local index = tab.tab_index + 1
+	local title = index .. ":" .. name
+	if tab.is_active then
+		return {
+			{ Text = "  " .. title .. "*" },
+		}
+	end
+	return { { Text = "  " .. title } }
+end)
 
 wezterm.on("update-right-status", function(window, pane)
-	window:set_right_status(wezterm.format({
-		{ Attribute = { Underline = "Single" } },
+	window:set_left_status(wezterm.format({
+		{ Text = " [" },
 		{ Text = tostring(window:active_workspace()) },
-		"ResetAttributes",
-		{ Text = " | " },
+		{ Text = "]" },
+	}))
+
+	window:set_right_status(wezterm.format({
 		{ Attribute = { Italic = true } },
 		{ Text = tostring(pane:get_current_working_dir()) },
 	}))
 end)
 
 -- Font
-config.font = wezterm.font("Roboto Mono", { weight = "Regular" })
+config.font = wezterm.font("Roboto Mono", { weight = "Medium" })
 config.font_size = 12
 -- config.line_height = 1.15
 
