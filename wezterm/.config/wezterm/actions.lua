@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 local act = wezterm.action
-local file = require("file-utils")
+local file = require("utils.file")
 local workspaces = require("workspaces")
 
 local M = {}

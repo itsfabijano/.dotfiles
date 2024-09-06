@@ -1,4 +1,4 @@
-local file = require("file-utils")
+local file = require("utils.file")
 
 local M = {}
 

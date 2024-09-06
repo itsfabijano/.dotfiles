@@ -1,6 +1,8 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local keys = require("keys")
+local hostname = require("utils.hostname")
+local file = require("utils.file")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -47,16 +49,9 @@ config.colors = {
 }
 config.tab_max_width = 100
 
--- Equivalent to POSIX basename(3)
--- Given "/foo/bar" returns "bar"
--- Given "c:\\foo\\bar" returns "bar"
-local function basename(s)
-	return string.gsub(s, "(.*[/\\])(.*)", "%2")
-end
-
 wezterm.on("format-tab-title", function(tab)
 	local pane = tab.active_pane
-	local name = basename(pane.foreground_process_name)
+	local name = file.basename(pane.foreground_process_name)
 	local index = tab.tab_index + 1
 	local title = index .. ":" .. name
 	if tab.is_active then
@@ -67,7 +62,7 @@ wezterm.on("format-tab-title", function(tab)
 	return { { Text = "  " .. title } }
 end)
 
-wezterm.on("update-right-status", function(window, pane)
+wezterm.on("update-right-status", function(window, _)
 	window:set_left_status(wezterm.format({
 		{ Text = " [" },
 		{ Text = tostring(window:active_workspace()) },
@@ -75,8 +70,9 @@ wezterm.on("update-right-status", function(window, pane)
 	}))
 
 	window:set_right_status(wezterm.format({
-		{ Attribute = { Italic = true } },
-		{ Text = tostring(pane:get_current_working_dir()) },
+		{ Text = tostring(hostname.getHostname()) },
+		{ Text = " | " },
+		{ Text = wezterm.strftime("%Y-%m-%d %H:%M:%S") },
 	}))
 end)
 
