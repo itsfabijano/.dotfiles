@@ -26,25 +26,13 @@ local function harpoon_section()
 	}
 end
 
-local function get_branch_name()
-	for line in io.popen("git branch 2> /dev/null"):lines() do
-		local m = line:match("%* (.+)$")
-		if m then
-			return m
-		end
-	end
-
-	return false
-end
-
 local function project_name()
 	local cwd = vim.fn.getcwd()
 	local name = cwd:match("([^/]+)$")
-	local branch = get_branch_name()
 	return {
 		title = "Project",
 		draw = function()
-			return name .. (branch and " (" .. branch .. ")" or "")
+			return name
 		end,
 	}
 end
@@ -55,7 +43,7 @@ return {
 	config = function()
 		local sidebar = require("sidebar-nvim")
 		sidebar.setup({
-			sections = { project_name(), harpoon_section() },
+			sections = { project_name(), harpoon_section(), "git" },
 			initial_width = 100,
 			open = true,
 			disable_default_keybindings = false,
