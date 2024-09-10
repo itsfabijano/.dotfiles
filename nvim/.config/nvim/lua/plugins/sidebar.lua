@@ -27,7 +27,7 @@ local function harpoon_section()
 end
 
 local function get_branch_name()
-	for line in io.popen("git branch 2>nul"):lines() do
+	for line in io.popen("git branch 2> /dev/null"):lines() do
 		local m = line:match("%* (.+)$")
 		if m then
 			return m

@@ -60,9 +60,9 @@ function M.setup(config)
 
 	b.unset("w", "CMD")
 	b.set("&", "LEADER", wez_actions.CloseCurrentTab({ confirm = true }))
+	b.set("x", "LEADER", wez_actions.CloseCurrentPane({ confirm = false }))
 
 	-- TODO: Add more keybindings here
-	-- <Prefix> x for killing a pane
 	-- <Prefix> : for custom command palette
 end
 
