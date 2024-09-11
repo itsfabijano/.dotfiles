@@ -8,7 +8,7 @@ return {
 	{
 		"tpope/vim-fugitive",
 		config = function()
-			vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+			vim.keymap.set("n", "<leader>gs", ":vertical rightbelow Git<CR>")
 
 			local Group_Fugative = vim.api.nvim_create_augroup("Group_Fugative", {})
 
@@ -41,24 +41,5 @@ return {
 			vim.keymap.set("n", "gu", "<cmd>diffget //2<CR>")
 			vim.keymap.set("n", "gh", "<cmd>diffget //3<CR>")
 		end,
-	},
-	{
-		"kdheepak/lazygit.nvim",
-		cmd = {
-			"LazyGit",
-			"LazyGitConfig",
-			"LazyGitCurrentFile",
-			"LazyGitFilter",
-			"LazyGitFilterCurrentFile",
-		},
-		-- optional for floating window border decoration
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		-- setting the keybinding for LazyGit with 'keys' is recommended in
-		-- order to load the plugin when the command is run for the first time
-		keys = {
-			{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
-		},
 	},
 }
