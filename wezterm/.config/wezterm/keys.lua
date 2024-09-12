@@ -64,6 +64,9 @@ function M.setup(config)
 
 	-- TODO: Add more keybindings here
 	-- <Prefix> : for custom command palette
+	-- <Prefix> ( ) for moving to next and previous workspace
+	-- <Prefix> n p for moving to next and previous tab
+	-- <Prefix> hjkl to move between panes
 end
 
 return M
