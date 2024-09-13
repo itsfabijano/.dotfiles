@@ -9,6 +9,7 @@ brew install bat
 brew install --cask wezterm
 brew install stow
 brew install fd
+brew install --cask nikitabobko/tap/aerospace
 
 # Fonts
 brew install font-meslo-lg-nerd-font

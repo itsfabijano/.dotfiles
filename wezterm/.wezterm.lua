@@ -28,8 +28,8 @@ config.colors = {
 }
 
 -- Font
-config.font = wezterm.font("Roboto Mono", { weight = "Medium" })
-config.font_size = 12
+config.font = wezterm.font("Roboto Mono", { weight = "Regular" })
+config.font_size = 12.0
 -- config.line_height = 1.15
 
 keys.setup(config)
