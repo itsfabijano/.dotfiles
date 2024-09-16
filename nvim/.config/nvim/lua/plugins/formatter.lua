@@ -25,6 +25,7 @@ return {
 				graphql = { "prettier" },
 				python = { "black" },
 				astro = { "prettier" },
+				yaml = { "prettier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

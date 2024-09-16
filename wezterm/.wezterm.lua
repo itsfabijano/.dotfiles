@@ -20,7 +20,8 @@ config.window_padding = {
 local COLORS = {
 	ayu_background = "#0c0e13",
 	material_ocean_background = "#0f111a",
-	custom_background = "#18181b",
+	grey = "#1f2125",
+	dark_red = "#0a0000",
 }
 
 config.colors = {
@@ -28,9 +29,11 @@ config.colors = {
 }
 
 -- Font
-config.font = wezterm.font("Roboto Mono", { weight = "Regular" })
+config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
 config.font_size = 12.0
--- config.line_height = 1.15
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+-- config.line_height = 1.1
+-- config.cell_width = 1
 
 keys.setup(config)
 tab_bar.setup(config)
