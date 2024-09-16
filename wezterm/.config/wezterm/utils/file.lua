@@ -17,6 +17,7 @@ function M.read_lines(file)
 	end
 	local lines = {}
 	for line in io.lines(file) do
+		print("line", line)
 		lines[#lines + 1] = line
 	end
 	return lines

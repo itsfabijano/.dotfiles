@@ -24,6 +24,7 @@ return {
 				lua = { "stylua" },
 				graphql = { "prettier" },
 				python = { "black" },
+				astro = { "prettier" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
