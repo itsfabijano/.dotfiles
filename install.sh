@@ -13,7 +13,7 @@ brew install --cask nikitabobko/tap/aerospace
 
 # Fonts
 brew install font-meslo-lg-nerd-font
-brew install font-roboto-mono
+brew install font-roboto-mono-nerd-font
 
 # Lazygit
 brew install jesseduffield/lazygit/lazygit

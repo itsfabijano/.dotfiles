@@ -29,9 +29,13 @@ end
 
 function M.setup(config)
 	local b = KeyBuilder(config)
+
 	-- https://raw.githubusercontent.com/emretuna/.dotfiles/main/wezterm/.config/wezterm/keys.lua
-	config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 	config.keys = {}
+
+	local LEADER = "a"
+	config.leader = { key = LEADER, mods = "CTRL", timeout_milliseconds = 1000 }
+	b.set(LEADER, "LEADER|CTRL", wez_actions.SendKey({ key = LEADER, mods = "CTRL" }))
 
 	-- Make Option-Left equivalent to Alt-b which many line editors interpret as backward-word
 	b.set("LeftArrow", "OPT", wez_actions.SendString("\x1bb"))

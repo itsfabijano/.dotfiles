@@ -89,7 +89,7 @@ outer.right =      0
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion vertical'
+alt-period = 'layout accordion vertical' 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'

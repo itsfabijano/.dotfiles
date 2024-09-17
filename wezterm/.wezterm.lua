@@ -29,8 +29,8 @@ config.colors = {
 }
 
 -- Font
-config.font = wezterm.font("JetBrains Mono", { weight = "Regular" })
-config.font_size = 12.0
+config.font = wezterm.font("RobotoMono Nerd Font", { weight = "Regular" })
+config.font_size = 12.4
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 -- config.line_height = 1.1
 -- config.cell_width = 1
