@@ -22,10 +22,11 @@ local COLORS = {
 	material_ocean_background = "#0f111a",
 	grey = "#1f2125",
 	dark_red = "#0a0000",
+	github_dark = "#0d1117",
 }
 
 config.colors = {
-	background = COLORS.material_ocean_background,
+	background = COLORS.github_dark,
 }
 
 -- Font
