@@ -20,13 +20,13 @@ config.window_padding = {
 local COLORS = {
 	ayu_background = "#0c0e13",
 	material_ocean_background = "#0f111a",
-	grey = "#1f2125",
+	grey = "#1e2127",
 	dark_red = "#0a0000",
 	github_dark = "#0d1117",
 }
 
 config.colors = {
-	background = COLORS.github_dark,
+	background = COLORS.grey,
 }
 
 -- Font
