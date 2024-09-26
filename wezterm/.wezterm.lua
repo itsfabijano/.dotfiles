@@ -29,9 +29,19 @@ config.colors = {
 	background = COLORS.grey,
 }
 
+-- config.freetype_load_target = "Light"
+
 -- Font
-config.font = wezterm.font("MesloLGM Nerd Font", { weight = "Regular" })
-config.font_size = 12.0
+config.font = wezterm.font("RobotoMono Nerd Font", { weight = "Regular" })
+-- config.font = wezterm.font("Hack Nerd Font", { weight = "Regular" })
+-- config.font = wezterm.font("MesloLGL Nerd Font", { weight = "Regular" })
+config.font_size = 12
+
+config.inactive_pane_hsb = {
+	saturation = 0.9,
+	brightness = 0.8,
+}
+
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 -- config.line_height = 1.1
 -- config.cell_width = 1
