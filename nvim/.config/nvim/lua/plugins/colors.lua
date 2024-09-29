@@ -13,6 +13,7 @@ function ColorMyPencils(color)
 
 	-- Set the background color of the selected item in the popup menu
 	vim.cmd([[highlight PmenuSel guibg=#61AFEF]])
+	vim.cmd([[highlight StatusLine guibg=#333333]])
 end
 
 return {

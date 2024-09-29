@@ -31,7 +31,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "120"
 
 -- Don't show the mode, since it's already in the status linE
-vim.opt.showmode = false
+vim.opt.showmode = true
 
 vim.opt.cursorline = false
 
