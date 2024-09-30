@@ -39,8 +39,8 @@ config.font = wezterm.font("RobotoMono Nerd Font", { weight = "Regular" })
 config.font_size = 12
 
 config.inactive_pane_hsb = {
-	saturation = 0.9,
-	brightness = 0.8,
+	saturation = 1, -- 0.9
+	brightness = 1, -- 0.8
 }
 
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
