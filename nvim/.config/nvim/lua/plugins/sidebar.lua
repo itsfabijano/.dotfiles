@@ -45,11 +45,8 @@ return {
 		sidebar.setup({
 			sections = { project_name() },
 			initial_width = 100,
-			open = true,
+			open = false,
 			disable_default_keybindings = false,
-			todos = {
-				initially_closed = true,
-			},
 		})
 
 		vim.keymap.set("n", "<leader>sb", sidebar.toggle)

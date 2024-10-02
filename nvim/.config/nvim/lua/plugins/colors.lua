@@ -4,6 +4,10 @@ function ColorMyPencils(color)
 	color = color or default_color
 	vim.cmd.colorscheme(color)
 
+	-- vim.diagnostic.config({
+	-- 	float = { border = "none", header = "" },
+	-- })
+
 	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#2e323b" })
 	-- vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = "none" })
@@ -22,7 +26,6 @@ return {
 		name = "rose-pine",
 		config = function()
 			require("rose-pine").setup({
-				disable_background = true,
 				extend_background_behind_borders = true,
 				styles = {
 					italic = false,
@@ -31,8 +34,9 @@ return {
 				highlight_groups = {
 					NormalFloat = { bg = "#2e323b" },
 					Pmenu = { bg = "#2e323b" },
-					PmenuSel = { bg = "#61AFEF" },
+					PmenuSel = { bg = "#494f5c" },
 					StatusLine = { bg = "#333333" },
+					DiagnosticFloatingError = { bg = "none" },
 				},
 			})
 			ColorMyPencils()
