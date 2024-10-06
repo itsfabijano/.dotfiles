@@ -24,18 +24,20 @@ local COLORS = {
 	grey = "#1e2127",
 	dark_red = "#0a0000",
 	github_dark = "#0d1117",
+	black = "#000000",
 }
 
 config.colors = {
-	background = COLORS.grey,
+	background = COLORS.ayu_background,
 }
 
--- config.freetype_load_target = "Light"
+config.freetype_load_target = "Light"
 
 -- Font
-config.font = wezterm.font("RobotoMono Nerd Font", { weight = "Regular" })
+-- config.font = wezterm.font("RobotoMono Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("Hack Nerd Font", { weight = "Regular" })
 -- config.font = wezterm.font("MesloLGL Nerd Font", { weight = "Regular" })
+config.font = wezterm.font("JetBrains Mono", { weight = "Medium" })
 config.font_size = 12
 
 config.inactive_pane_hsb = {
