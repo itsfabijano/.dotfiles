@@ -14,10 +14,14 @@ return {
 			columns = { "icon" },
 			keymaps = {
 				["<C-h>"] = false,
-				["<C-l>"] = false,
+				["<C-l>"] = "actions.refresh",
 				["<C-k>"] = false,
 				["<C-j>"] = false,
-				["<M-h>"] = "actions.select_split",
+				["<C-v>"] = {
+					"actions.select",
+					opts = { vertical = true },
+					desc = "Open the entry in a vertical split",
+				},
 			},
 			win_options = {
 				winbar = "%{v:lua.CustomOilBar()}",

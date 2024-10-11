@@ -35,5 +35,8 @@ vim.opt.showmode = true
 
 vim.opt.cursorline = false
 
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
 -- Preview substitutions live, as you type!
 -- vim.opt.inccommand = "split"
