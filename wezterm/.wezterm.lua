@@ -21,14 +21,14 @@ config.window_padding = {
 local COLORS = {
 	ayu_background = "#0c0e13",
 	material_ocean_background = "#0f111a",
-	grey = "#1e2127",
+	grey = "#202223",
 	dark_red = "#0a0000",
 	github_dark = "#0d1117",
 	black = "#000000",
 }
 
 config.colors = {
-	background = COLORS.ayu_background,
+	background = COLORS.grey,
 }
 
 config.freetype_load_target = "Light"
