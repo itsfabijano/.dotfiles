@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo rm -rf /Library/Keyboard\ Layouts/real-prog-qwerty.bundle
+sudo cp -r ./keyboard-layouts/real-prog-qwerty.bundle /Library/Keyboard\ Layouts/real-prog-qwerty.bundle

@@ -28,7 +28,7 @@ local COLORS = {
 }
 
 config.colors = {
-	background = COLORS.grey,
+	background = COLORS.ayu_background,
 }
 
 config.freetype_load_target = "Light"
