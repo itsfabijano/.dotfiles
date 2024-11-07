@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 
 config.enable_kitty_keyboard = true
 config.enable_csi_u_key_encoding = false
-config.force_reverse_video_cursor = true
+-- config.force_reverse_video_cursor = true
 
 config.window_decorations = "INTEGRATED_BUTTONS"
 config.window_padding = {
@@ -29,6 +29,9 @@ local COLORS = {
 
 config.colors = {
 	background = COLORS.ayu_background,
+	cursor_fg = "black",
+	cursor_bg = "white",
+	cursor_border = "white",
 }
 
 config.freetype_load_target = "Light"
