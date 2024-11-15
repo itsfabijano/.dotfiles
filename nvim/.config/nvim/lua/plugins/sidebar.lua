@@ -39,7 +39,7 @@ end
 
 return {
 	"sidebar-nvim/sidebar.nvim",
-	enabled = true,
+	enabled = false,
 	config = function()
 		local sidebar = require("sidebar-nvim")
 		sidebar.setup({

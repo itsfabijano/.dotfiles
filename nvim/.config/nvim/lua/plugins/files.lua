@@ -14,7 +14,8 @@ return {
 			columns = { "icon" },
 			keymaps = {
 				["<C-h>"] = false,
-				["<C-l>"] = "actions.refresh",
+				["<C-r>"] = "actions.refresh",
+				["<C-l>"] = false,
 				["<C-k>"] = false,
 				["<C-j>"] = false,
 				["<C-v>"] = {
