@@ -33,6 +33,7 @@ return {
 				"gopls",
 				"graphql",
 				"pylsp",
+				"jsonls",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)

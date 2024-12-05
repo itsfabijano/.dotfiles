@@ -52,7 +52,7 @@ function M.setup(config)
 	set("SUPER", "v", wezterm.action.PasteFrom("Clipboard"))
 
 	set("SUPER", "-", wezterm.action.DecreaseFontSize)
-	set("SUPER", "=", wezterm.action.IncreaseFontSize)
+	set("SUPER", "+", wezterm.action.IncreaseFontSize)
 	set("SUPER", "0", wezterm.action.ResetFontSize)
 
 	set("LEADER", "[", wezterm.action.ActivateCopyMode)
