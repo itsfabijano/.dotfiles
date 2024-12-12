@@ -41,6 +41,8 @@ function M.setup(config)
 	set("LEADER", "L", actions.PreviousWorkspace())
 
 	set("LEADER", "c", wezterm.action.SpawnTab("CurrentPaneDomain"))
+	set("LEADER", ",", wezterm.action.ActivateTabRelative(-1)) -- <
+	set("LEADER", ".", wezterm.action.ActivateTabRelative(1)) -- >
 	set("LEADER|CTRL", ",", wezterm.action.MoveTabRelative(-1)) -- <
 	set("LEADER|CTRL", ".", wezterm.action.MoveTabRelative(1)) -- >
 
