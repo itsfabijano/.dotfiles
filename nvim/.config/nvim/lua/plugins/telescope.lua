@@ -42,7 +42,7 @@ return {
 		local builtin = require("telescope.builtin")
 
 		set("n", "<leader>pb", builtin.buffers, {}) -- [P]roject [B]uffers
-		set("n", "<D-p>", builtin.git_files, {})
+		set("n", "<Esc>CmdP", builtin.git_files, {})
 		set("n", "<leader>pf", builtin.find_files, {}) -- [P]roject [F]ilesearch
 
 		-- [P]roject [A]ll Files

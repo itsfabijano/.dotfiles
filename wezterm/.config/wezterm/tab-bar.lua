@@ -1,6 +1,5 @@
 local wezterm = require("wezterm")
 local file = require("utils.file")
-local hostname = require("utils.hostname")
 
 local M = {}
 
@@ -14,14 +13,14 @@ function M.setup(config)
 	config.tab_bar_at_bottom = true
 
 	config.colors.tab_bar = {
-		background = "#333333",
+		background = config.colors.background,
 		active_tab = {
-			bg_color = "#333333",
+			bg_color = config.colors.background,
 			fg_color = "#5eacd3",
 			intensity = "Bold",
 		},
 		inactive_tab = {
-			bg_color = "#333333",
+			bg_color = config.colors.background,
 			fg_color = "#5eacd3",
 		},
 	}
@@ -45,12 +44,6 @@ function M.setup(config)
 			{ Text = " [" },
 			{ Text = tostring(window:active_workspace()) },
 			{ Text = "]" },
-		}))
-
-		window:set_right_status(wezterm.format({
-			{ Text = tostring(hostname.getHostname()) },
-			{ Text = " | " },
-			{ Text = wezterm.strftime("%Y-%m-%d %H:%M  ") },
 		}))
 	end)
 end

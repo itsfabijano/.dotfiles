@@ -1,4 +1,4 @@
 #!/bin/bash
 
-stow kitty nvim tmux wezterm zsh ripgrep aerospace
+stow nvim tmux wezterm zsh ripgrep aerospace ghostty
 

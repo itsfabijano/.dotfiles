@@ -28,7 +28,7 @@ local COLORS = {
 }
 
 config.colors = {
-	background = COLORS.ayu_background,
+	background = COLORS.black,
 	cursor_fg = "black",
 	cursor_bg = "white",
 	cursor_border = "white",
