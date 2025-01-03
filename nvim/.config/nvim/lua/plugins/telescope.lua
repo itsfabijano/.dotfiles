@@ -42,7 +42,7 @@ return {
 		local builtin = require("telescope.builtin")
 
 		set("n", "<leader>pb", builtin.buffers, {}) -- [P]roject [B]uffers
-		set("n", "<Esc>CmdP", builtin.git_files, {})
+		set("n", "<D-p>", builtin.git_files, {})
 		set("n", "<leader>pf", builtin.find_files, {}) -- [P]roject [F]ilesearch
 
 		-- [P]roject [A]ll Files
@@ -55,7 +55,7 @@ return {
 			}))
 		end)
 
-		set("n", "<leader>pg", builtin.git_files, {}) -- [P]roject [G]itsearch
+		set("n", "<leader>pd", builtin.git_files, {}) -- [P]roject [D]efault Search
 		set("n", "<leader>/", builtin.current_buffer_fuzzy_find)
 		set("n", "<leader>pws", builtin.grep_string) -- [P]rep [W]ord [S]earch
 		set("n", "<leader>ps", builtin.live_grep) -- [P]roject [S]earch

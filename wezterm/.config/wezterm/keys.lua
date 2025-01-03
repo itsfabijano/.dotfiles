@@ -78,7 +78,7 @@ function M.setup(config)
 	set("SUPER", "q", wezterm.action.QuitApplication)
 
 	set(
-		"SUPER",
+		"CTRL",
 		"k",
 		wezterm.action.Multiple({
 			wezterm.action.ClearScrollback("ScrollbackAndViewport"),

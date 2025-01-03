@@ -9,11 +9,6 @@ window-theme = ghostty
 
 # Comments start with a `#` and are only valid on their own line.
 # Blank lines are ignored!
-keybind = cmd+p=esc:CmdP
-keybind = cmd+1=esc:Cmd1
-keybind = cmd+2=esc:Cmd2
-keybind = cmd+3=esc:Cmd3
-keybind = cmd+4=esc:Cmd4
 
 font-size = 12
 title = " "
