@@ -1,7 +1,7 @@
 #!/bin/bash
 brew install neovim
 brew install ripgrep
-brew install tmux
+brew install tmux -v -s --HEAD
 brew install fzf
 brew install nvm
 brew install tree

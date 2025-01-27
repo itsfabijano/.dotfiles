@@ -34,6 +34,7 @@ return {
 				"graphql",
 				"pylsp",
 				"jsonls",
+				"marksman",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)
