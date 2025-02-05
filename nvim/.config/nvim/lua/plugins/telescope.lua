@@ -26,6 +26,19 @@ return {
 				live_grep = {
 					hidden = true,
 				},
+				commands = {
+					theme = "dropdown",
+					entry_maker = function(entry)
+						return {
+							value = entry,
+							ordinal = entry.name, -- Enables filtering
+							display = function(e)
+								return e.value.name -- Only show the command name
+							end,
+							cmd = entry.name, -- Ensures execution works
+						}
+					end,
+				},
 			},
 			extensions = {
 				["ui-select"] = {
