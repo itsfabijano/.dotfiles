@@ -1,7 +1,7 @@
 -- Lua
 return {
 	"folke/zen-mode.nvim",
-	enabled = true,
+	enabled = false,
 	config = function()
 		vim.keymap.set("n", "<leader>sb", function()
 			require("zen-mode").setup({

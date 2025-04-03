@@ -10,6 +10,7 @@ brew install --cask wezterm
 brew install stow
 brew install fd
 brew install --cask nikitabobko/tap/aerospace
+brew install gnu-sed
 
 # Fonts
 brew install font-meslo-lg-nerd-font

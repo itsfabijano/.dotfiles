@@ -39,12 +39,12 @@ end
 
 return {
 	"sidebar-nvim/sidebar.nvim",
-	enabled = false,
+	enabled = true,
 	config = function()
 		local sidebar = require("sidebar-nvim")
 		sidebar.setup({
 			sections = { project_name() },
-			initial_width = 100,
+			initial_width = 120,
 			open = false,
 			disable_default_keybindings = false,
 		})
