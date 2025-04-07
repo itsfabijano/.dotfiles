@@ -11,7 +11,11 @@ window-theme = ghostty
 # Blank lines are ignored!
 
 macos-option-as-alt = true
+<<<<<<< Updated upstream
 font-size = 13
+=======
+font-size = 12
+>>>>>>> Stashed changes
 # adjust-cell-width = "-10%"
 # adjust-cell-height = "11%"
 # font-thicken = true
